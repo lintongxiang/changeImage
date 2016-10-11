@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+
+		<script language=javascript>
+			var curIndex = 0;
+			//时间间隔 单位毫秒 
+			var arr = new Array();
+			arr[0] = "img/1.jpg";
+			arr[1] = "img/2.jpg";
+			arr[2] = "img/3.jpg";
+			arr[3] = "img/4.jpg";
+			arr[4] = "img/5.jpg";
+			arr[5] = "img/6.jpg";
+
+			function changeImg() {
+				var obj = document.getElementById("showpic");
+				if(curIndex == arr.length - 1) {
+					curIndex = 0;
+				} else {
+					curIndex += 1;
+				}
+				obj.src = arr[curIndex];
+			}
+		</script>
+		<img src="img/1.jpg" width="427" height="219" id="showpic" />
+		<input type="button" value="nnn" onclick="changeImg()" />
+	</body>
+
+</html>
